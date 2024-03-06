@@ -22,7 +22,7 @@ ljd install`,
 		fmt.Println("installing")
 		installationDir, err := os.UserHomeDir()
 		if err == nil {
-			library.install(installationDir)
+			fmt.Print(installationDir)
 		}
 	},
 }
