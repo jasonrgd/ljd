@@ -4,9 +4,7 @@ Copyright © 2024 Jason Dsouza <jason@leanj.de>
 package cmd
 
 import (
-	"fmt"
-	"os"
-
+	"github.com/jasonrgd/ljd/library"
 	"github.com/spf13/cobra"
 )
 
@@ -19,11 +17,7 @@ The following lines depict usage of this utillity:
 
 ljd install`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("installing")
-		installationDir, err := os.UserHomeDir()
-		if err == nil {
-			fmt.Print(installationDir)
-		}
+		library.Install()
 	},
 }
 
